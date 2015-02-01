@@ -1,7 +1,7 @@
 package com.patterns.davidshalom.myapplication;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -12,6 +12,8 @@ public class MainActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+
+		doStuff();
 	}
 
 
@@ -35,5 +37,39 @@ public class MainActivity extends ActionBarActivity {
 		}
 
 		return super.onOptionsItemSelected(item);
+	}
+
+	private void doStuff() {
+
+		NumberProgram numberProgram = new NumberProgram();
+
+		numberProgram.setNumber(4);
+		android.util.Log.e("DSDS", "Current number is : " + numberProgram.getNumber());
+
+		numberProgram.setNumber(5);
+		android.util.Log.e("DSDS", "Current number is : " + numberProgram.getNumber());
+
+		numberProgram.setNumber(6);
+		android.util.Log.e("DSDS", "Current number is : " + numberProgram.getNumber());
+
+		numberProgram.setNumber(7);
+		android.util.Log.e("DSDS", "Current number is : " + numberProgram.getNumber());
+
+		numberProgram.undo();
+		android.util.Log.e("DSDS", "Current number is : " + numberProgram.getNumber());
+
+		numberProgram.undo();
+		android.util.Log.e("DSDS", "Current number is : " + numberProgram.getNumber());
+
+		numberProgram.undo();
+		android.util.Log.e("DSDS", "Current number is : " + numberProgram.getNumber());
+
+		numberProgram.undo();
+		android.util.Log.e("DSDS", "Current number is : " + numberProgram.getNumber());
+
+		numberProgram.undo();
+		android.util.Log.e("DSDS", "Current number is : " + numberProgram.getNumber());
+
+
 	}
 }
